@@ -10,7 +10,7 @@
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree&display=swap" rel="stylesheet">
 
     <!-- app css-->
     <link rel="stylesheet" href="./app.css">
@@ -20,6 +20,27 @@
 
 </head>
 <body>
+    <header>
+        <img class="logo" src="assets\images\sudoku_ai-removebg-preview (1).png" alt="logo" width="150" height="15">
+        <nav>
+            <ul class = "navigation_links">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <!--<a class="cta" href=""><button>Contact</button></a>-->
+        <div id="darktoggle">
+            <i class="indicator"></i>
+        </div>
+        <script>
+            const toggle = document.getElementById("darktoggle");
+            toggle.onclick=function(){
+                toggle.classList.toggle('active')
+            }
+        </script>
+    </header>
     Hello World!
+    
 </body>
 </html>
