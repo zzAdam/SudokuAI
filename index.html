@@ -34,9 +34,13 @@
             <i class="indicator"></i>
         </div>
         <script>
+            const body = document.querySelector('body');
+            const header = document.querySelector('header')
             const toggle = document.getElementById("darktoggle");
             toggle.onclick=function(){
-                toggle.classList.toggle('active')
+                toggle.classList.toggle('active');
+                body.classList.toggle('active');
+                header.classList.toggle('active');
             }
         </script>
     </header>
