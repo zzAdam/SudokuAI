@@ -133,7 +133,7 @@ button:hover{
 #darktoggle .indicator {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0 ;
     width: 40px;
     height: 40px;
     background: linear-gradient(to bottom,#444,#222) ;
@@ -145,5 +145,5 @@ button:hover{
 }
 
 #darktoggle.active .indicator {
-    left: 40 px;
+    left: 50%;
 }
