@@ -1,3 +1,28 @@
+:root {
+    --bg-main: #f0f2f5;
+    --bg-body: #fff;
+    --color-txt: #000;
+    --filled-color: #000;
+    --filled-bg: #caf0f8;
+
+    --white: #fff;
+    --blue: #00aeef;
+    --red: #e91e63;
+    --black: #000;
+
+    --nav-size: 70px;
+    --sudoku-cell-size: 50px;
+
+    --border-radius: 10px;
+
+    --space-y: 20px;
+
+    --gap: 5px;
+
+    --font-size: 1.5rem;
+    --font-size-lg: 2rem;
+    --font-size-xl: 3rem;
+}
 
 * {
     padding: 0;
@@ -12,12 +37,21 @@ body{
     
     font-family: 'Figtree', cursive;
     height: 100vh;
-    background: #f0f2f5;
-    overflow: hidden;
-    transition: 0.5s;
+    background-color: var(--bg-body);
+    overflow-x: hidden;
+    user-select: none;
 }
 
+input {
+    font-family: "Figtree", cursive;
+    border: 2px solid var(--bg-main);
+    color: var(--color-txt);
+}
 
+input:hover,
+input:focus {
+    border-color: var(--blue);
+}
 
 li,a,button{
     text-decoration: none;
@@ -111,7 +145,6 @@ button:hover{
 
 }
 
-
 #darktoggle.active .indicator {
     left: 50%;
     background: linear-gradient(to bottom,#eaeaea,#f9f9f9) ;
@@ -126,33 +159,69 @@ header.active{
     background: #d4d4d4;
 }
 
-.main{
-    height: 100vh;
-    padding-top: 70px;
+.main {
+    /* height: 100vh; */
+    padding-top: var(--nav-size);
     display: grid;
     place-items: center;
 }
 
-.screen{
+.screen {
     position: relative;
     overflow: hidden;
-    height: 90%;
-    min-width: 40 px;
+    height: 100%;
+    min-width: 400px;
 }
-
-.start-screen{
-    position: absolute;
+.start-screen {
     top: 0;
-    left:0;
+    left: 0;
     width: 100%;
-    height:100%;
+    height: 100%;
     transform: translateX(-100%);
-    transition: transform .3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.start-screen.active{
+
+.start-screen.active {
     transform: translateX(0);
+}
+.start-screen > * + * {
+    margin-top: 20px;
+}
+
+.input-name {
+    height: 80px;
+    width: 280px;
+    border-radius: var(--border-radius);
+    outline: 0;
+    background-color: var(--bg-main);
+    padding: 20px;
+    font-size: var(--font-size-lg);
+    text-align: center;
+}
+.btn {
+    height: 80px;
+    width: 280px;
+    background-color: var(--bg-main);
+    color: var(--color-txt);
+    border-radius: var(--border-radius);
+    display: grid;
+    place-items: center;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    font-size: var(--font-size-lg);
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.input-err {
+    border-color: var(--red);
+    animation: bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
