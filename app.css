@@ -221,7 +221,3 @@ header.active{
     color: var(--white);
 }
 
-.input-err {
-    border-color: var(--red);
-    animation: bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
